@@ -1,33 +1,79 @@
 /*
-color palette:
-Antique brass(lmedium light brown): CB997E
-Desert brown: DDBEA9
-Eggplant: 594157
-Ash gray: B7B7A4
-Artichoke: A5A58D
-Ebony: 6B705C
+    color palette:
+        Antique brass(lmedium light brown): CB997E
+        Desert brown: DDBEA9
+        Eggplant: 594157
+        Ash gray: B7B7A4
+        Artichoke: A5A58D
+        Ebony: 6B705C
 */
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 .nav-bar {
     background-color: #CB997E;
-    overflow: hidden;
     display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
 }
 
 .nav-title {
     font-weight: bolder;
     font-size: 25px;
+    text-decoration: none;
+    color: black;
+    flex-shrink: 0;  
+    margin-right: 20px;  
 }
 
-.nav-bar a {
-    float: left;
+.nav-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-grow: 1;  
+}
+
+.nav-items a {
     text-align: center;
     text-decoration: none;
-    gap: 10px;
     color: black;
-    padding: 14px 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-items a:hover {
+    background-color: #DDBEA9;
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+
+    .nav-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-items a {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
 }
 
 p {
-    margin-left: 15px;
+    padding-left: 15px;
 }
