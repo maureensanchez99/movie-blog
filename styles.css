@@ -108,3 +108,16 @@ button {
 button:hover {
     background-color: #DDBEA9;
 }
+
+.review-list {
+    padding: 20px;
+}
+
+.review-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

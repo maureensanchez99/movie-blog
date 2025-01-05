@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film review</title>
+    <title>Media Review</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <script src="script.js" defer></script>
 </head>
@@ -41,6 +41,9 @@
                 <option value="Anime">Anime</option>
                 <option value="Other">Other</option>
             </select>
+
+            <label for="movieRelease">Movie Release</label>
+            <input type="text" id="movieRelease" name="movieRelease" placeholder="Enter year when movie was released" required />
 
             <label for="rating">Rating:</label>
             <input type="number" id="rating" name="rating" step="0.5" min="0" max="5" placeholder="0-5 stars" required />
