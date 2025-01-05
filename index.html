@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film review</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,11 +16,41 @@
             <a href="pages/hollywood.html">Hollywood</a>
             <a href="pages/international.html">International</a>
             <a href="pages/anime.html">Anime</a>
+            <a href="pages/other/html">Other</a>
         </div>
     </div>
-    <p>
-        Welcome to my thoughts on various movies and shows I've watched throughout my life.
-    </p>
+
+    <div class="about-container">
+        <p>
+            Welcome to my thoughts on various movies and shows I've watched throughout my life.
+        </p>
+    </div>
+
+    <div class="add-entry">
+        <h2>Add a Review</h2>
+        <button id="unlockButton" onclick="validatePassword()">Unlock Review Form</button>
+        <form id="reviewForm" class="hidden">
+            <label for="movieTitle">Movie Title:</label>
+            <input type="text" id="movieTitle" name="movieTitle" placeholder="Enter the movie title" required />
+
+            <label for="movieType">Movie Type:</label>
+            <select id="movieType" name="movieType" required>
+                <option value="">Select a type</option>
+                <option value="Hollywood">Hollywood</option>
+                <option value="International">International</option>
+                <option value="Anime">Anime</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" step="0.5" min="0" max="5" placeholder="0-5 stars" required />
+
+            <label for="reviewDescription">Review:</label>
+            <textarea id="reviewDescription" name="reviewDescription" rows="5" placeholder="Write your review here..." required></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
 </body>
 
 </html>
