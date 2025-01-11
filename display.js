@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviewsContainer = document.getElementById("reviewsContainer");
     const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 
-    const type = "Hollywood";
+    const hType = "Hollywood";
+    const iType = "International";
+    const aType = "Anime";
+    const oType = "Other";
     const filteredReviews = reviews.filter(review => review.type === type);
 
     if (filteredReviews.length === 0) {
@@ -10,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Display the reviews
+    // display the reviews
     filteredReviews.forEach(review => {
         const reviewDiv = document.createElement("div");
         reviewDiv.className = "review-item";
